@@ -41,4 +41,32 @@ def create_tree(data, label):
         partitioned_data = [d for d in data if d[feature] == c]
         node[feature_label][c] = create_tree(partitioned_data, label)
     return node
-    
+
+def classify(tree, label, data):
+    root = list(tree.keys())[0]
+    node = tree[root]
+    index = label.index(root)
+    for k in node.keys():
+        if data[index] == k:
+            if isinstance(node[k], dict): # if the leaf node is a dictionary, recur
+                return classify(node[k], label, data)
+            else:
+                return node[k]
+
+
+def as_rule_str(tree, label, ident=0):
+    space_indent = '  '*ident
+    s = space_indent
+    root = list(tree.keys())[0]
+    node = tree[root]
+    index = label.index(root)
+    for k in node.keys():
+        s += 'if ' + label[index] + ' = ' + str(k)
+        if isinstance(node[k], dict):
+            s += ':\n' + space_indent + as_rule_str(node[k], label, ident + 1)
+        else:
+            s += ' then ' + str(node[k]) + ('.\n' if ident == 9 else ', ')
+    if s[-2:] == ', ':
+        s = s[:2]
+    s += '\n'
+    return s
