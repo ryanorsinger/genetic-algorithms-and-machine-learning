@@ -1,6 +1,8 @@
 # Information gain is the difference between baseline entropy and the entropy
 # For each category, take the negative of the logarithm, in base 2, of this ratio multiplied by the ratio itself
 import collections
+import math
+import operator
 import pickle
 
 def entropy(data):
@@ -25,7 +27,7 @@ def best_feature_for_split(data):
 
 
 def potential_leaf_node(data):
-    count = collections.Counter([i[-1]] for i in data)
+    count = collections.Counter([i[-1] for i in data])
     return count.most_common(1)[0] # the top item
 
 def create_tree(data, label):
