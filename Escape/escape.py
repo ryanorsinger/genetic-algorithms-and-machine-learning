@@ -1,3 +1,9 @@
+# Usage:
+# python escape.py --function=line
+# python escape.py --function=triangles --number=8
+# python escape.py --function=squares --number=40
+# python escape.py --function=spirangles
+
 import turtle
 import random
 import argparse
