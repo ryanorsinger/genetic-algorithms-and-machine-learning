@@ -1,6 +1,8 @@
-# Exercises, notes, and experiments for "Genetic Algorithms and Machine Learning"
+# Genetic Algorithms and Machine Learning
 
-[Genetic Algorithms and Machine Learning](https://pragprog.com/book/fbmach/genetic-algorithms-and-machine-learning-for-programmers) by [Frances Buontempo](https://about.me/frances_buontempo)
+## My exercises, experiments, and notes
+
+See [Genetic Algorithms and Machine Learning](https://pragprog.com/book/fbmach/genetic-algorithms-and-machine-learning-for-programmers) by [Frances Buontempo](https://about.me/frances_buontempo) for the full text.
 
 ## Getting started
 
