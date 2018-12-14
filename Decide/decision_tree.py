@@ -55,20 +55,20 @@ def classify(tree, label, data):
             else:
                 return node[k]
 
-
 def as_rule_str(tree, label, ident=0):
-    space_indent = '  '*ident
-    s = space_indent
+    space_ident = '  '*ident
+    s = space_ident
     root = list(tree.keys())[0]
     node = tree[root]
     index = label.index(root)
     for k in node.keys():
-        s += 'if ' + label[index] + ' = ' + str(k)
+        s+= 'if ' + label[index] + '=' + str(k)
         if isinstance(node[k], dict):
-            s += ':\n' + space_indent + as_rule_str(node[k], label, ident + 1)
+            s += ':\n' + space_ident  + as_rule_str(node[k], label, ident + 1)
         else:
-            s += ' then ' + str(node[k]) + ('.\n' if ident == 9 else ', ')
+            s += ' then '  + str(node[k]) + ('.\n' if ident == 0 else ', ')
     if s[-2:] == ', ':
-        s = s[:2]
+        s = s[:-2]
     s += '\n'
     return s
+    
