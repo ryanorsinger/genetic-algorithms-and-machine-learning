@@ -12,12 +12,9 @@ See [Genetic Algorithms and Machine Learning](https://pragprog.com/book/fbmach/g
 ## Table of Contents
 
 - Chapter 1 exercises in `./Escape` 
-
 - Chapter 2 exercises in `./Decide`
 
 
 
 ## Todos
-
 - Add a readme files w/ usage instructions to each folder/chapter
-- 
