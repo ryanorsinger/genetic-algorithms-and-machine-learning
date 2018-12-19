@@ -1,3 +1,5 @@
+# Exercise reads the data generated from ../Escape/escape.py
+
 # Information gain is the difference between baseline entropy and the entropy
 # For each category, take the negative of the logarithm, in base 2, of this ratio multiplied by the ratio itself
 import collections
@@ -72,3 +74,12 @@ def as_rule_str(tree, label, ident=0):
     s += '\n'
     return s
     
+
+
+with open("../Escape/data_rand", "rb") as f:
+    data = pickle.load(f)
+
+label = ['x', 'y', 'out']
+
+tree = create_tree(data, label)
+print(as_rule_str(tree, label))
