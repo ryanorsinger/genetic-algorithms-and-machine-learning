@@ -75,11 +75,33 @@ def as_rule_str(tree, label, ident=0):
     return s
     
 
+def find_edges(tree, label, X, Y):
+    X.sort()
+    Y.sort()
+    diagonals = [i for i in set(X).intersection(set(Y))]
+    diagonals.sort()
+    L = [classify(tree, label [d, d]) for d in diagonals]
+    low = L.index(False)
+    min_x = X[low]
+    min_y = Y[low]
+    high = L[::-1].index(False)
+    max_x = X[len(X)-1 - high]
+    max_y = Y[len(X)-1 - high]
+    return (min_x, min_y), (max_x, max_y)
+
+
 
 with open("../Escape/data_rand", "rb") as f:
     data = pickle.load(f)
 
-label = ['x', 'y', 'out']
+print(data[0])
+
+label=['x'+str(i) for i in range(1, len(data[0])+1)]
+label[0]='x'
+label.append("y")
 
 tree = create_tree(data, label)
+print(tree)
 print(as_rule_str(tree, label))
+print(find_edges(tree, label, [x[0] for x in data], [x[0] for x in data]))
+

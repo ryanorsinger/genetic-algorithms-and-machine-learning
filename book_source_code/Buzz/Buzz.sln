@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 13.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests", "UnitTests\UnitTests.vcxproj", "{597BD199-E415-4BEA-83D1-076482260187}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bees", "Bees\Bees.vcxproj", "{40DA6EAC-35FF-43C5-ACF0-053545519D4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ABC", "ABC\ABC.vcxproj", "{C02CC62F-48F4-408B-A00B-1BE43AC7E6D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{597BD199-E415-4BEA-83D1-076482260187}.Debug|Win32.ActiveCfg = Debug|Win32
+		{597BD199-E415-4BEA-83D1-076482260187}.Debug|Win32.Build.0 = Debug|Win32
+		{597BD199-E415-4BEA-83D1-076482260187}.Release|Win32.ActiveCfg = Release|Win32
+		{597BD199-E415-4BEA-83D1-076482260187}.Release|Win32.Build.0 = Release|Win32
+		{40DA6EAC-35FF-43C5-ACF0-053545519D4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{40DA6EAC-35FF-43C5-ACF0-053545519D4F}.Debug|Win32.Build.0 = Debug|Win32
+		{40DA6EAC-35FF-43C5-ACF0-053545519D4F}.Release|Win32.ActiveCfg = Release|Win32
+		{40DA6EAC-35FF-43C5-ACF0-053545519D4F}.Release|Win32.Build.0 = Release|Win32
+		{C02CC62F-48F4-408B-A00B-1BE43AC7E6D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C02CC62F-48F4-408B-A00B-1BE43AC7E6D4}.Debug|Win32.Build.0 = Debug|Win32
+		{C02CC62F-48F4-408B-A00B-1BE43AC7E6D4}.Release|Win32.ActiveCfg = Release|Win32
+		{C02CC62F-48F4-408B-A00B-1BE43AC7E6D4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
