@@ -66,3 +66,7 @@ label = ['x', 'y', 'out']
 
 - try to identify the feature with the lowest entropy
 - calculate information gain and pick the variable with the highest gain. This gain is the difference between the baseline entropy and entropy if you split on one attribute.
+
+## Extrapolation
+- for category data, we can't extrapolate
+- With numerical data, we can.
